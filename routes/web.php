@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/form','TestController@input');
+Route::post('/form/input-process', 'TestController@inputprocess');
+Route::get('view', 'TestController@input');
