@@ -81,11 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Perpustakaan
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Tambah Buku</a>
+                    <a href="/form">Tambah Buku</a>
                     <a href="https://laracasts.com">Daftar Buku</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>

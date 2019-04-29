@@ -27,4 +27,9 @@ class TestController extends Controller
 
     	return redirect('/');
     }
+    public function view()
+  {
+    $buku = Buku::all();
+    return view('view', compact('buku'));
+  }
 }
