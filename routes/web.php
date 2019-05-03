@@ -19,3 +19,4 @@ Route::post('/form/input-process', 'TestController@inputprocess');
 //Route::get('view', 'TestController@inputprocess');
 Route::get('/view', 'TestController@view');
 Route::get('/destroy/{id}', 'TestController@destroy');
+Route::post('/form', 'TestController@store');

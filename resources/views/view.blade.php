@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="type/css" href="{{asset('css/app.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <title>Perpustakaan</title>
     <style media="screen" >
@@ -11,6 +12,7 @@
     	height: 100%;
     	color: #636b6f;
     	background-color: #fff;
+    	font-family: 'Poppins', sans-serif;
     }
     .container{
     	height: 100%;
@@ -33,7 +35,7 @@
     	height: 100%;
     }
     button.edit{
-    	background:lightblue;
+    	background:#5aa6c4;
     	color: white;
     	border:none;
     	border-radius: 4px;
@@ -42,7 +44,7 @@
     	width: 50px;
     }
     button.edit:hover{
-    	background:blue;
+    	background:#376e84;
     	color: white;
     	border:none;
     	border-radius: 4px;
@@ -51,16 +53,17 @@
     	width: 50px;
     }
     button.delete{
-    	background:pink;
+    	background:#e56e6e;
     	color: white;
     	border:none;
     	border-radius: 4px;
     	outline: none;
     	width: 70px;
     	cursor: pointer;
+    	margin-left: -10px;
     }
     button.delete:hover{
-    	background:red;
+    	background:#a84141;
     	color: white;
     	border:none;
     	border-radius: 4px;
@@ -68,6 +71,14 @@
     	width: 70px;
     	cursor: pointer;
     }
+
+    thead {
+    	
+    background-color: ghostwhite;
+
+    }
+    
+
     	
     </style>
     
@@ -76,12 +87,26 @@
   <body>
     <div class="container">
     	<div>
-    		<div class="title-wrapper">
+    		<div class="title-wrapper" style="position: relative;">
     			<h1 class="daftar-title">Daftar Buku</h1>
+    			<a href="{{action('TestController@store')}}"><button class="btn btn-success float-right Tambah" 
+    				style=" 
+    				color: #45b79b;
+    				width: 145px;
+    				position: absolute;
+    				top: 30px;
+    				right: 0;
+    				background: #fff;
+    				border: 1px solid #45b79b;
+    				border-radius: 4px;
+    				outline: none;
+    				cursor: pointer; 
+    				">Tambah Buku</button></a>
+
     			<!-- <button type="button" name="button" class="btn btn-info"><a href="/" class="goto-home">Halaman Utama</a></button> -->
     		</div>
     		<div>
-    			<table class="table">
+    			<table class="table" cellpadding="10" cellspacing="0">
     				<thead>
     					<tr>
     					<th>ID</th>
@@ -96,12 +121,12 @@
     				<tbody class="table-hover">
     					@foreach($buku as $buku)
     					<tr>
-    						<th>{{$buku['id']}}</th>
-    						<th>{{$buku['judul']}}</th>
-    						<th>{{$buku['pengarang']}}</th>
-    						<th>{{$buku['tahun_terbit']}}</th>
-    						<th>{{$buku['penerbit']}}</th>
-    						<th>
+    						<td>{{$buku['id']}}</td>
+    						<td>{{$buku['judul']}}</td>
+    						<td>{{$buku['pengarang']}}</td>
+    						<td>{{$buku['tahun_terbit']}}</td>
+    						<td>{{$buku['penerbit']}}</td>
+    						<td>
     							<button type="submit" name="button" class="btn btn-success edit">Edit</button>
     							
     						</th>

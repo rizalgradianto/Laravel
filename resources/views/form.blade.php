@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>Perpustakaan</title>
     <style media="screen">
       html,
@@ -10,6 +11,7 @@
         height: 100%;
         color: #636b6f;
         background-color: #fff;
+        font-family: 'Poppins', sans-serif;
       }
       .wrapper{
         height: 100%;
