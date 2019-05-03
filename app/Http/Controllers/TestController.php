@@ -25,11 +25,16 @@ class TestController extends Controller
     	]);
     	$buku->save();
 
-    	return redirect('/');
+    	return redirect('view');
     }
     public function view()
   {
     $buku = Buku::all();
     return view('view', compact('buku'));
+  }
+  public function destroy($id)
+  {
+  	Buku::find($id)->delete();
+  	return redirect('view');
   }
 }
