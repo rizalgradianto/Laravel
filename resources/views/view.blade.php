@@ -127,13 +127,15 @@
     						<td>{{$buku['tahun_terbit']}}</td>
     						<td>{{$buku['penerbit']}}</td>
     						<td>
+    							<a href="{{action('TestController@update', $buku['id'])}}">
     							<button type="submit" name="button" class="btn btn-success edit">Edit</button>
+    							</a>
     							
     						</th>
     						<th>
-    							<form action="{{action('TestController@destroy', $buku['id'])}}" method="get">
+    							<form action="{{action('TestController@destroy', $buku['id'])}}" method="post">
     								@csrf
-    							<button type="submit" name="button" class="btn btn-danger delete">Delete</button>
+    							<button type="submit" name="button" class="btn btn-danger delete">Hapus</button>
     							</form>
     						</th>
     					</tr>
