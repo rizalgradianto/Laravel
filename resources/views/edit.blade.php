@@ -8,9 +8,11 @@
     <body>
     <div class="container">
         <h2 style="margin-top:20px;">Edit Data Buku</h2><br/>
-        <form method="post" action="{{action('TestController@update', $id)}}">
+        @foreach($buku as $buku)
+        <form method="post" action="{{action('TestController@update', $buku->id)}}">
         @csrf
         <input name="_method" type="hidden" value="PATCH">
+        @endforeach
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">

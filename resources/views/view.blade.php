@@ -127,7 +127,7 @@
     						<td>{{$buku['tahun_terbit']}}</td>
     						<td>{{$buku['penerbit']}}</td>
     						<td>
-    							<a href="{{action('TestController@update', $buku['id'])}}">
+    							<a href="{{action('TestController@edit', $buku['id'])}}">
     							<button type="submit" name="button" class="btn btn-success edit">Edit</button>
     							</a>
     							

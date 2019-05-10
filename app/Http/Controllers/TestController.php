@@ -28,21 +28,21 @@ class TestController extends Controller
     	return redirect('view');
     }
 
-    public function update($id)
+    public function edit()
     {
-    	$buku = \App\Buku::find($id);
+    	$buku = \App\Buku::all();
     	return view('edit', compact('buku'));
     }
-    // public function update(Request $request, $id)
-    // {
-    // 	$buku= \App\Buku::find($id);
-    // 	$buku->judul=$request->get('judul');
-    // 	$buku->penerbit=$request->get('penerbit');
-    // 	$buku->tahun_terbit=$request->get('tahun_terbit');
-    // 	$buku->pengarang=$request->get('pengarang');
-    // 	$buku->save();
-    // 	return redirect('view');    	
-    // }
+    public function update(Request $request, $id)
+    {
+    	$buku= \App\Buku::find($id);
+    	$buku->judul=$request->get('judul');
+    	$buku->penerbit=$request->get('penerbit');
+    	$buku->tahun_terbit=$request->get('tahun_terbit');
+    	$buku->pengarang=$request->get('pengarang');
+    	$buku->save();
+    	return redirect('view');    	
+    }
     public function view()
   {
     $buku = Buku::all();
