@@ -28,6 +28,12 @@ class TestController extends Controller
     	return redirect('view');
     }
 
+    public function index()
+    {
+        $buku=\App\Buku::all();
+        return view('view', compact('buku'));
+    }
+
     public function edit()
     {
     	$buku = \App\Buku::all();

@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Perpustakaan
+                    Ngabuburead.com
                 </div>
 
                 <div class="links">
                     <a href="/form">Tambah Buku</a>
-                    <a href="https://laracasts.com">Daftar Buku</a>
+                    <a href="/view">Daftar Buku</a>
                     <!-- <a href="https://laravel-news.com">News</a> -->
                     <!-- <a href="https://blog.laravel.com">Blog</a> -->
                     <!-- <a href="https://nova.laravel.com">Nova</a> -->
